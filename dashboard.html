@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manage your personal profile, workout progress, and custom metrics." />
+  <title>VM Fitness Gym | User Dashboard</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body style="background: var(--bg-primary);">
+
+  <!-- Loading Screen -->
+  <div class="preloader" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">VM</span>
+        <span>VM Fitness</span>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Gym</a>
+        <a href="services.html">Services</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="plans.html">Membership</a>
+        <a href="planner.html">AI Planner</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-ripple">Login</a>
+        <a href="signup.html" class="btn btn-primary btn-ripple">Join Now</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 120px; padding-bottom: 80px;">
+    <div class="container">
+      <div class="grid dashboard-grid">
+        
+        <!-- Sidebar Profile Details -->
+        <aside class="sidebar-profile reveal-left">
+          <div class="profile-pic" id="profileInitials">VM</div>
+          <div class="profile-info">
+            <h3 id="profileName">Loading Name...</h3>
+            <p class="muted" id="profileEmail" style="font-size: 13px; margin-bottom: 15px;">Loading Email...</p>
+            <span class="logo-badge" id="profilePlanBadge" style="font-size: 11px; font-weight: 700; letter-spacing: 0.5px; padding: 4px 10px;">None Plan</span>
+          </div>
+
+          <div class="profile-stats">
+            <div class="profile-stat-row">
+              <span>Age</span>
+              <span id="statAge">-</span>
+            </div>
+            <div class="profile-stat-row">
+              <span>Gender</span>
+              <span id="statGender">-</span>
+            </div>
+            <div class="profile-stat-row">
+              <span>Height</span>
+              <span id="statHeight">- cm</span>
+            </div>
+            <div class="profile-stat-row">
+              <span>Weight</span>
+              <span id="statWeight">- kg</span>
+            </div>
+            <div class="profile-stat-row" style="border-bottom: none;">
+              <span>Goal</span>
+              <span id="statGoal" style="color: var(--primary-color); font-weight: 700;">-</span>
+            </div>
+          </div>
+
+          <button id="editProfileBtn" class="btn btn-outline btn-ripple" style="width: 100%; margin-top: 30px; font-size: 14px; padding: 10px 0;">Edit Profile Details</button>
+        </aside>
+
+        <!-- Main Dashboard content (Bento Grid of Metrics) -->
+        <div class="dashboard-content reveal-right">
+          
+          <!-- Dynamic Welcoming Header -->
+          <div>
+            <h2 style="font-size: 30px; font-weight: 800; margin-bottom: 8px;">Fitness Diagnostics Summary</h2>
+            <p class="muted">Based on your biomechanical and demographic parameters, we've computed your real-time stats.</p>
+          </div>
+
+          <!-- Bento Grid -->
+          <div class="grid bento-grid">
+            
+            <!-- Metric 1: BMI -->
+            <div class="bento-card">
+              <h4>Body Mass Index (BMI)</h4>
+              <div class="value" id="bmiValue" style="color: var(--primary-color);">0.0</div>
+              <div class="desc" id="bmiCategory">Category: Normal</div>
+            </div>
+
+            <!-- Metric 2: Calories Target -->
+            <div class="bento-card">
+              <h4>Daily Calorie Needs</h4>
+              <div class="value" id="caloriesValue" style="color: var(--accent-color);">0</div>
+              <div class="desc" id="caloriesGoalDesc">To hit your selected goal</div>
+            </div>
+
+            <!-- Metric 3: Ideal Weight Range -->
+            <div class="bento-card">
+              <h4>Ideal Weight Range</h4>
+              <div class="value" id="weightRangeValue" style="font-size: 20px; line-height: 48px;">- kg</div>
+              <div class="desc">Healthy target spectrum</div>
+            </div>
+
+            <!-- Metric 4: Daily Protein Target -->
+            <div class="bento-card">
+              <h4>Protein Intake Needed</h4>
+              <div class="value" id="proteinValue" style="color: #ffb800;">0g</div>
+              <div class="desc">For metabolic maintenance</div>
+            </div>
+
+            <!-- Metric 5: Daily Water Target -->
+            <div class="bento-card">
+              <h4>Water Intake Needed</h4>
+              <div class="value" id="waterValue" style="color: #00ccff;">0.0L</div>
+              <div class="desc">Including exercise hydration</div>
+            </div>
+
+            <!-- Metric 6: Current Membership Plan -->
+            <div class="bento-card">
+              <h4>Active Plan Details</h4>
+              <div class="value" id="activePlanTitle" style="font-size: 24px; line-height: 48px;">None Plan</div>
+              <div class="desc" id="activePlanDesc">Click to select/upgrade plan</div>
+            </div>
+          </div>
+
+          <!-- Workout Progress bar card -->
+          <div class="bento-card" style="width: 100%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h4 style="margin: 0;">Weekly Workout Consistency</h4>
+              <span id="progressPercent" style="font-size: 14px; font-weight: 700; color: var(--primary-color);">15% Completed</span>
+            </div>
+            <div style="width: 100%; height: 10px; background: rgba(255,255,255,0.05); border-radius: 5px; overflow: hidden; border: 1px solid var(--glass-border);">
+              <div id="progressBar" style="width: 15%; height: 100%; background: var(--primary-gradient); border-radius: 5px; transition: width 0.5s ease;"></div>
+            </div>
+            <p class="muted" style="font-size: 12px; margin-top: 10px;">Consistently hit 4 workout days a week to progress your streak and unlock rewards.</p>
+          </div>
+
+          <!-- Shortcuts -->
+          <div class="bento-card" style="width: 100%; background: linear-gradient(135deg, rgba(255,51,102,0.05) 0%, rgba(255,102,51,0.05) 100%);">
+            <h4 style="color: var(--primary-color);">AI FITNESS PLANNER PLATFORM</h4>
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px; margin-top: 5px;">Unlock Your Full Diet & Workout Potential</h3>
+            <p class="muted" style="font-size: 14px; margin-bottom: 20px; max-width: 600px;">
+              Our server-side Gemini AI engine integrates with your demographics to build high-precision, customized meal schedules and Monday-to-Sunday exercise plans.
+            </p>
+            <a href="planner.html" class="btn btn-primary btn-ripple" style="font-size: 14px; padding: 10px 24px;">Launch AI Planner</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Profile Modal Overlay -->
+    <div id="profileModal" class="preloader" style="background: rgba(10, 10, 12, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); display: none; padding: 24px;">
+      <div class="form-card reveal" style="max-width: 550px;">
+        <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 4px; text-align: center;">Modify Profile Details</h3>
+        <p class="muted" style="text-align: center; margin-bottom: 24px;">Update parameters to recompute metrics instantly.</p>
+        
+        <form id="editProfileForm">
+          <div class="form-group">
+            <label for="editName">Full Name</label>
+            <input type="text" id="editName" class="form-control" required />
+          </div>
+
+          <div class="planner-grid-2">
+            <div class="form-group">
+              <label for="editAge">Age (years)</label>
+              <input type="number" id="editAge" class="form-control" min="10" max="90" required />
+            </div>
+            <div class="form-group">
+              <label for="editGender">Gender</label>
+              <select id="editGender" class="form-control" style="background: #1c1c24;">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="planner-grid-2">
+            <div class="form-group">
+              <label for="editHeight">Height (cm)</label>
+              <input type="number" id="editHeight" class="form-control" min="100" max="230" required />
+            </div>
+            <div class="form-group">
+              <label for="editWeight">Weight (kg)</label>
+              <input type="number" id="editWeight" class="form-control" min="30" max="200" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="editGoal">Fitness Goal</label>
+            <select id="editGoal" class="form-control" style="background: #1c1c24;">
+              <option value="Weight Loss">Weight Loss</option>
+              <option value="Muscle Gain">Muscle Gain</option>
+              <option value="Fat Loss">Fat Loss</option>
+              <option value="Maintain Weight">Maintain Weight</option>
+            </select>
+          </div>
+
+          <div style="display: flex; gap: 15px; margin-top: 30px;">
+            <button type="button" id="closeModalBtn" class="btn btn-outline btn-ripple" style="flex: 1; padding: 12px 0;">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-ripple" style="flex: 1; padding: 12px 0;">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-flex;">
+            <span class="logo-badge">VM</span>
+            <span>VM Fitness</span>
+          </a>
+          <p class="muted">A premium gym website concept built for modern fitness lovers.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Gym</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="plans.html">Membership Plans</a></li>
+            <li><a href="planner.html">AI Fitness Planner</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: support@fitforge.com</li>
+            <li>Phone: +91 98765 43210</li>
+            <li>Open: 5:30 AM - 10:30 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2026 VM Fitness Gym. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

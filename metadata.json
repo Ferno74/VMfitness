@@ -1,0 +1,6 @@
+{
+  "name": "VM Fitness Gym",
+  "description": "A premium modern gym website with elite programs, certified trainers, and an AI-powered fitness planner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

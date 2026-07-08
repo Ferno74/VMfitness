@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium modern gym website with classes, trainers, plans, and AI fitness support." />
+  <title>VM Fitness Gym | Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="preloader" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">VM</span>
+        <span>VM Fitness</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Gym</a>
+        <a href="services.html">Services</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="plans.html">Membership</a>
+        <a href="planner.html">AI Planner</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-ripple">Login</a>
+        <a href="signup.html" class="btn btn-primary btn-ripple">Join Now</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Premium Fitness Club • Train Smarter • Get Stronger</span>
+          <h1>Build a Stronger Body, Healthier Mind, and Better Lifestyle</h1>
+          <p>
+            Join a modern gym experience designed for real results — expert trainers,
+            advanced equipment, personalized plans, and a motivating environment.
+          </p>
+
+          <div class="hero-actions">
+            <a href="signup.html" class="btn btn-primary btn-ripple">Join Now</a>
+            <a href="plans.html" class="btn btn-outline btn-ripple">Explore Plans</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <h3 class="counter" data-target="1200">0</h3>
+              <p>Members</p>
+            </div>
+            <div class="stat-card">
+              <h3 class="counter" data-target="45">0</h3>
+              <p>Trainers</p>
+            </div>
+            <div class="stat-card">
+              <h3 class="counter" data-target="980">0</h3>
+              <p>Success Stories</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Our Premium Features</h2>
+          <p>Everything you need for a complete fitness journey in one place.</p>
+        </div>
+
+        <div class="grid features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon">💪</div>
+            <h3>Modern Equipment</h3>
+            <p>Train on top-class machines, free weights, and functional workout zones.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">🧠</div>
+            <h3>Smart Training Plans</h3>
+            <p>Personalized workout guidance designed for your fitness level and goals.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">🥗</div>
+            <h3>Nutrition Support</h3>
+            <p>Get healthy diet suggestions and proper nutrition support for faster progress.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">🏆</div>
+            <h3>Goal Tracking</h3>
+            <p>Track your body transformation, performance improvements, and workout consistency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section alt" id="why-choose-us">
+      <div class="container">
+        <div class="grid why-grid">
+          <div class="reveal">
+            <div class="section-heading" style="text-align:left; margin:0 0 20px;">
+              <h2>Why Choose VM Fitness?</h2>
+              <p>We focus on results, comfort, and a premium fitness experience.</p>
+            </div>
+
+            <div class="why-points">
+              <div class="point">
+                <span class="dot"></span>
+                <div>
+                  <h3>Professional Coaching</h3>
+                  <p class="muted">Certified trainers with personalized attention and form correction.</p>
+                </div>
+              </div>
+
+              <div class="point">
+                <span class="dot"></span>
+                <div>
+                  <h3>Friendly Environment</h3>
+                  <p class="muted">A motivating space for beginners and advanced fitness lovers.</p>
+                </div>
+              </div>
+
+              <div class="point">
+                <span class="dot"></span>
+                <div>
+                  <h3>Flexible Plans</h3>
+                  <p class="muted">Affordable membership options that fit your lifestyle and budget.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-image reveal">
+            <img
+              src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80"
+              alt="People training in a premium gym"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>What Our Members Say</h2>
+          <p>Real people, real progress, real results.</p>
+        </div>
+
+        <div class="grid testimonials-grid">
+          <article class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <h3>Best gym experience ever</h3>
+            <p>The trainers are very supportive and the atmosphere keeps me motivated every day.</p>
+            <div class="user-row">
+              <img class="avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Member 1">
+              <div>
+                <strong>Rahul Sharma</strong>
+                <span>Member</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <h3>Great plans and guidance</h3>
+            <p>I improved my fitness with a structured routine and nutrition advice from VM Fitness.</p>
+            <div class="user-row">
+              <img class="avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Member 2">
+              <div>
+                <strong>Ananya Verma</strong>
+                <span>Member</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <h3>Modern and professional</h3>
+            <p>Clean equipment, modern design, and a premium vibe. It feels like a top fitness brand.</p>
+            <div class="user-row">
+              <img class="avatar" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Member 3">
+              <div>
+                <strong>Arjun Mehta</strong>
+                <span>Member</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section alt" id="gallery">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Gym Gallery</h2>
+          <p>Take a look at our training spaces and premium environment.</p>
+        </div>
+
+        <div class="grid gallery-grid">
+          <div class="gallery-card reveal">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80" alt="Workout area">
+          </div>
+          <div class="gallery-card reveal">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" alt="Gym training">
+          </div>
+          <div class="gallery-card reveal">
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80" alt="Female training">
+          </div>
+          <div class="gallery-card reveal">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80" alt="Weight training">
+          </div>
+          <div class="gallery-card reveal">
+            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1200&q=80" alt="Cardio area">
+          </div>
+          <div class="gallery-card reveal">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80" alt="Premium fitness space">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-flex;">
+            <span class="logo-badge">F</span>
+            <span>VM Fitness</span>
+          </a>
+          <p class="muted">A premium gym website concept built for modern fitness lovers.</p>
+
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Gym</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="plans.html">Membership Plans</a></li>
+            <li><a href="planner.html">AI Fitness Planner</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: support@fitforge.com</li>
+            <li>Phone: +91 98765 43210</li>
+            <li>Open: 5:30 AM - 10:30 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2026 VM Fitness Gym. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hide preloader after page loads
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      if (preloader) preloader.classList.add("hide");
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("show");
+        });
+      });
+    }
+
+    // Button ripple effect
+    document.querySelectorAll(".btn-ripple").forEach(button => {
+      button.addEventListener("click", function (e) {
+        const ripple = document.createElement("span");
+        const rect = this.getBoundingClientRect();
+
+        ripple.style.left = `${e.clientX - rect.left}px`;
+        ripple.style.top = `${e.clientY - rect.top}px`;
+
+        this.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // Intersection Observer for fade-in animations
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+
+    // Animated counters
+    const counters = document.querySelectorAll(".counter");
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const counter = entry.target;
+        const target = +counter.getAttribute("data-target");
+        let current = 0;
+        const step = Math.ceil(target / 100);
+
+        const updateCounter = () => {
+          current += step;
+          if (current < target) {
+            counter.textContent = current;
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target + "+";
+          }
+        };
+
+        updateCounter();
+        counterObserver.unobserve(counter);
+      });
+    }, { threshold: 0.6 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+  </script>
+</body>
+</html>

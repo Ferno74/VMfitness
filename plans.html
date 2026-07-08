@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore VM Fitness Gym's affordable membership plans." />
+  <title>VM Fitness Gym | Membership Plans</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="preloader" id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">VM</span>
+        <span>VM Fitness</span>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Gym</a>
+        <a href="services.html">Services</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="plans.html" class="active">Membership</a>
+        <a href="planner.html">AI Planner</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-ripple">Login</a>
+        <a href="signup.html" class="btn btn-primary btn-ripple">Join Now</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 120px;">
+    <!-- Page Header -->
+    <section class="section" style="padding: 60px 0 20px;">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">CHOOSE YOUR SUBSCRIPTION</span>
+          <h2>Membership Pricing Tiers</h2>
+          <p>Unlock premium training facilities, custom dietary schedules, and professional trainers tailored to your goals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans Cards Section -->
+    <section class="section alt">
+      <div class="container">
+        <div class="grid plans-grid">
+          
+          <!-- Basic Plan -->
+          <article class="plan-card reveal reveal-delay-1">
+            <div class="plan-header">
+              <h3 class="plan-name">Basic</h3>
+              <div class="plan-price">₹1,499<span>/month</span></div>
+            </div>
+            <ul class="plan-features">
+              <li>General Gym Floor Access</li>
+              <li>Free Weights & Cardio Machines</li>
+              <li>1 complimentary trainer assessment</li>
+              <li>Locker facility & shower rooms</li>
+              <li style="text-decoration: line-through; color: var(--text-muted); opacity: 0.5;">No group fitness classes</li>
+              <li style="text-decoration: line-through; color: var(--text-muted); opacity: 0.5;">No customized diet plans</li>
+            </ul>
+            <button onclick="selectPlan('Basic')" class="btn btn-outline btn-ripple" style="width: 100%;">Select Plan</button>
+          </article>
+
+          <!-- Standard Plan -->
+          <article class="plan-card reveal reveal-delay-2">
+            <div class="plan-header">
+              <h3 class="plan-name">Standard</h3>
+              <div class="plan-price">₹2,499<span>/month</span></div>
+            </div>
+            <ul class="plan-features">
+              <li>Unlimited Gym Access</li>
+              <li>Cardio, HIIT & Yoga group sessions</li>
+              <li>Monthly fitness tracker assessments</li>
+              <li>Free access to AI Fitness Planner</li>
+              <li>Sauna / Steam access 2x a week</li>
+              <li style="text-decoration: line-through; color: var(--text-muted); opacity: 0.5;">No dedicated personal coach</li>
+            </ul>
+            <button onclick="selectPlan('Standard')" class="btn btn-outline btn-ripple" style="width: 100%;">Select Plan</button>
+          </article>
+
+          <!-- Premium Plan -->
+          <article class="plan-card popular reveal reveal-delay-3">
+            <div class="plan-header">
+              <h3 class="plan-name">Premium</h3>
+              <div class="plan-price">₹4,499<span>/month</span></div>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Standard Tier</li>
+              <li>1-on-1 personal coach (2 sessions/mo)</li>
+              <li>Fully customized diet & macro targets</li>
+              <li>Unlimited Sauna & Recovery steam</li>
+              <li>Complimentary body scanning & diagnostic</li>
+              <li>Reserved premium VIP Locker access</li>
+            </ul>
+            <button onclick="selectPlan('Premium')" class="btn btn-primary btn-ripple" style="width: 100%;">Select Plan</button>
+          </article>
+
+          <!-- Elite Plan -->
+          <article class="plan-card reveal reveal-delay-4">
+            <div class="plan-header">
+              <h3 class="plan-name">Elite</h3>
+              <div class="plan-price">₹7,999<span>/month</span></div>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Premium Tier</li>
+              <li>Dedicated Full-time Personal Trainer</li>
+              <li>Daily nutrition audits & macro tracking</li>
+              <li>Access to all VM locations nationwide</li>
+              <li>Free guest passes (2 per month)</li>
+              <li>Complimentary pre-workout / energy shakes</li>
+            </ul>
+            <button onclick="selectPlan('Elite')" class="btn btn-outline btn-ripple" style="width: 100%;">Select Plan</button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-flex;">
+            <span class="logo-badge">VM</span>
+            <span>VM Fitness</span>
+          </a>
+          <p class="muted">A premium gym website concept built for modern fitness lovers.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Gym</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="plans.html">Membership Plans</a></li>
+            <li><a href="planner.html">AI Fitness Planner</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: support@fitforge.com</li>
+            <li>Phone: +91 98765 43210</li>
+            <li>Open: 5:30 AM - 10:30 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2026 VM Fitness Gym. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+  <script>
+    // Handles plan selection. Preserves selection inside localStorage, so if they signup/login they automatically have it.
+    function selectPlan(planName) {
+      localStorage.setItem("selectedPlan", planName);
+      
+      const currentUser = localStorage.getItem("currentUser");
+      if (currentUser) {
+        // If logged in, update plan directly in current profile and redirect to dashboard
+        const userObj = JSON.parse(currentUser);
+        userObj.currentPlan = planName;
+        localStorage.setItem("currentUser", JSON.stringify(userObj));
+        
+        // Also sync back to general users list
+        const users = JSON.parse(localStorage.getItem("gymUsers") || "[]");
+        const updatedUsers = users.map(u => u.email === userObj.email ? { ...u, currentPlan: planName } : u);
+        localStorage.setItem("gymUsers", JSON.stringify(updatedUsers));
+        
+        alert(`Successfully upgraded to the ${planName} Plan!`);
+        window.location.href = "dashboard.html";
+      } else {
+        // If not logged in, direct them to signup/login
+        alert(`You have selected the ${planName} Plan! Let's get you registered first.`);
+        window.location.href = "signup.html";
+      }
+    }
+  </script>
+</body>
+</html>
